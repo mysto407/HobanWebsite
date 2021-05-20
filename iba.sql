@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- Host:                         mydbinstance.c7klzuo1nogr.ap-southeast-2.rds.amazonaws.com
+-- Host:                         database10.c7klzuo1nogr.ap-southeast-2.rds.amazonaws.com
 -- Server version:               8.0.20 - Source distribution
 -- Server OS:                    Linux
 -- HeidiSQL Version:             11.2.0.6213
@@ -18,31 +18,6 @@ DROP DATABASE IF EXISTS `iba`;
 CREATE DATABASE IF NOT EXISTS `iba` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `iba`;
 
--- Dumping structure for table iba.contact
-DROP TABLE IF EXISTS `contact`;
-CREATE TABLE IF NOT EXISTS `contact` (
-  `cid` char(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `ctype` char(2) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `cactive` tinyint NOT NULL,
-  `cfirstname` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `clastname` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `caddress1` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `caddress2` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `csuburb` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `cstate` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `cpostcode` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `ccountry` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-  `cphone` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `cemail` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `cusername` varchar(50) NOT NULL,
-  `cpassword` varchar(50) NOT NULL,
-  PRIMARY KEY (`cid`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Dumping data for table iba.contact: ~0 rows (approximately)
-/*!40000 ALTER TABLE `contact` DISABLE KEYS */;
-/*!40000 ALTER TABLE `contact` ENABLE KEYS */;
-
 -- Dumping structure for table iba.interview
 DROP TABLE IF EXISTS `interview`;
 CREATE TABLE IF NOT EXISTS `interview` (
@@ -56,9 +31,29 @@ CREATE TABLE IF NOT EXISTS `interview` (
   `inote` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table iba.interview: ~0 rows (approximately)
-/*!40000 ALTER TABLE `interview` DISABLE KEYS */;
-/*!40000 ALTER TABLE `interview` ENABLE KEYS */;
+-- Data exporting was unselected.
+
+-- Dumping structure for table iba.organizer
+DROP TABLE IF EXISTS `organizer`;
+CREATE TABLE IF NOT EXISTS `organizer` (
+  `oid` char(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `oactive` tinyint NOT NULL,
+  `ofirstname` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `olastname` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `oaddress1` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `oaddress2` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `osuburb` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `ostate` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `opostcode` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `ocountry` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `ophone` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `oemail` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `ousername` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `opassword` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  PRIMARY KEY (`oid`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Data exporting was unselected.
 
 -- Dumping structure for table iba.slot
 DROP TABLE IF EXISTS `slot`;
@@ -69,9 +64,20 @@ CREATE TABLE IF NOT EXISTS `slot` (
   `sfinishtime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table iba.slot: ~0 rows (approximately)
-/*!40000 ALTER TABLE `slot` DISABLE KEYS */;
-/*!40000 ALTER TABLE `slot` ENABLE KEYS */;
+-- Data exporting was unselected.
+
+-- Dumping structure for table iba.student
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE IF NOT EXISTS `student` (
+  `sid` char(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `sactive` tinyint NOT NULL,
+  `sfirstname` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `slastname` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `semail` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  PRIMARY KEY (`sid`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+-- Data exporting was unselected.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

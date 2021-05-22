@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Appointment</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/05144c839d.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link href="newCalander.css" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    /* bcakground image */
+    body {
+      background-image: url('images/background.png');
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+
+  <div class="route" id="index"></div>
+  <div class="route" id="oct-week-3"></div>
+  <div class="route" id="oct-week-4"></div>
+  <div class="route" id="nov-week-1"></div>
+  <div class="route" id="schedule"></div>
+  <main class="cal-device">
+    <header class="cal-header">
+      <div class="cal-subheader"></div>
+      <div class="cal-bar">
+        <div class="cal-button -left">
+          <i class="fa fa-bars -calendar"></i>
+          <a href="#index" class="fa fa-chevron-left -schedule"></a>
+        </div>
+        <div class="cal-title">
+          <div class="cal-heading -calendar">Calendar</div>
+          <div class="cal-heading -schedule">Wednesday, November 10</div>
+        </div>
+        <div class="cal-button -right">
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </header>
+    <section class="cal-app">
+      <header class="cal-week">
+        <div class="cal-weekday">SUN</div>
+        <div class="cal-weekday">MON</div>
+        <div class="cal-weekday">TUE</div>
+        <div class="cal-weekday">WED</div>
+        <div class="cal-weekday">THU</div>
+        <div class="cal-weekday">FRI</div>
+        <div class="cal-weekday">SAT</div>
+      </header>
+      <div class="cal-scene -calendar">
+        <div class="cal-month -october">
+          <header class="cal-header">
+            <a class="cal-link" href="#oct-week-1"><span>October</span></a>
+            <a class="cal-arrow" href="#nov-week-1"><i class="fa fa-chevron-up"></i></a>
+            <a class="cal-arrow" href="#oct-week-4"><i class="fa fa-chevron-up"></i></a>
+          </header>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a href="#schedule" class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+        </div>
+        <div class="cal-month -november">
+          <header class="cal-header">
+            <a class="cal-link" href="#nov-week-1"><span>November</span></a>
+            <a class="cal-arrow"><i class="fa fa-chevron-up"></i></a>
+          </header>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a href="#schedule" class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a href="#schedule" class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a href="#schedule" class="cal-day"></a>
+          <a href="#schedule" class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+        </div>
+        <div class="cal-month -december">
+          <header class="cal-header">
+            <a class="cal-link"><span>December</span></a>
+            <a class="cal-arrow" href="#nov-week-1"><i class="fa fa-chevron-down"></i></a>
+            <a class="cal-arrow" href="#oct-week-3"><i class="fa fa-chevron-down"></i></a>
+          </header>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a href="#schedule" class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a href="#schedule" class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+        </div>
+        <div class="cal-month -january">
+          <header class="cal-header">
+            <div class="cal-link"><span>January</span></div>
+            <a class="cal-arrow" href="#oct-week-4"><i class="fa fa-chevron-down"></i></a>
+          </header>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+          <a class="cal-day"></a>
+        </div>
+      </div>
+      <div class="cal-scene -schedule">
+        <div class="cal-item">
+          <div class="cal-time"><span>08:00</span></div>
+          <div class="cal-task">
+            <p>wake up</p>
+          </div>
+        </div>
+        <div class="cal-item -long">
+          <div class="cal-time"><span>12:15</span></div>
+          <div class="cal-task">
+            <p>booked</p>
+          </div>
+        </div>
+        <div class="cal-item">
+          <div class="cal-time"><span>13:00</span></div>
+          <div class="cal-task">
+            <p>booked</p>
+
+          </div>
+        </div>
+        <div class="cal-item">
+          <div class="cal-time"><span>14:30</span></div>
+          <div class="cal-task">
+            <p>Free</p>
+          </div>
+        </div>
+        <div class="cal-item -long">
+          <div class="cal-time"><span>16:45</span></div>
+          <div class="cal-task">
+            <p>Free</p>
+
+          </div>
+        </div>
+        <div class="cal-item">
+          <div class="cal-time"><span>18:00</span></div>
+          <div class="cal-task">
+            <p>Free</p>
+          </div>
+        </div>
+        <div class="cal-item -long">
+          <div class="cal-time"><span>19:00</span></div>
+          <div class="cal-task">
+            <p>Free</p>
+            
+          </div>
+        </div>
+        <div class="cal-item">
+          <div class="cal-time"></div>
+          <div class="cal-task"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+</body>
+
+</html>
